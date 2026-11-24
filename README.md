@@ -10,10 +10,10 @@ Requirements:
 - Prevent a book from being issued if it is already issued.
 Expected output: A book list, search results, and updated availability status.
 ------- Proposed Solution---------
-We developed a menu-driven Library Book Management System in C.
- It stores each book's ID, title, author, and issue status.
- Users can add books, view the collection, search by ID, issue books, and return books.
- The program uses file handling to save records in (books.dat), so records can be loaded the next time the program starts.
+-We developed a menu-driven Library Book Management System in C.
+- It stores each book's ID, title, author, and issue status.
+ -Users can add books, view the collection, search by ID, issue books, and return books.
+ -The program uses file handling to save records in (books.dat), so records can be loaded the next time the program starts.
 
 ------- Project and Team Details------
  Project Title --Library Book Management System 
@@ -42,24 +42,23 @@ We developed a menu-driven Library Book Management System in C.
 8. Capacity: Stores up to 50 books, which supports the requirement of at least 10 books.
    
 ---------Algorithm / Pseudocode---------
-START
-Load saved book records from books.dat (if the file exists)
-Ask user for name and SAP ID
-REPEAT
-    Display menu
-    Read user's choice
-    IF choice = 1: Add book if library is not full and ID is unique; save
-    ELSE IF choice = 2: Display all books
-    ELSE IF choice = 3: Search for a book by ID
-    ELSE IF choice = 4: Find book; if available, mark issued and save
-    ELSE IF choice = 5: Find book; if issued, mark available and save
-    ELSE IF choice = 0: Display goodbye message
-    ELSE: Display invalid choice
-UNTIL choice = 0
-STOP
-flowchart
-flowchart TD
-    A([Start]) --> B[Load books.dat]
+-START
+-Load saved book records from books.dat (if the file exists)
+-Ask user for name and SAP ID
+-REPEAT
+ -   Display menu
+ -  Read user's choice
+ -   IF choice = 1: Add book if library is not full and ID is unique; save
+ -   ELSE IF choice = 2: Display all books
+ -   ELSE IF choice = 3: Search for a book by ID
+ -   ELSE IF choice = 4: Find book; if available, mark issued and save
+ -   ELSE IF choice = 5: Find book; if issued, mark available and save
+ -   ELSE IF choice = 0: Display goodbye message
+ -   ELSE: Display invalid choice
+-UNTIL choice = 0
+-STOP
+----flowchart---
+   A([Start]) --> B[Load books.dat]
     B --> C[Enter name and SAP ID]
     C --> D[Display library menu]
     D --> E{Menu choice?}
